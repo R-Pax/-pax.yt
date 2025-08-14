@@ -7,7 +7,10 @@
   <style>
     body {
       font-family: Inter, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: rgba(0,0,0,0.5); /* #00000080 */
+      /* background image + 50% black overlay */
+      background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('https://raw.githubusercontent.com/R-Pax/-pax.yt/main/FORT_Load_BuildOff.png') center/cover no-repeat;
       color: #fff;
       margin: 0;
       padding: 40px;
@@ -17,7 +20,7 @@
     h1 { margin: 0; font-size: 34px; }
     nav ul { list-style: none; padding: 0; display: flex; gap: 14px; margin: 14px 0; }
     nav a { color: #0b66ff; text-decoration: none; }
-    .card { background: #f7f8fb; border-radius: 10px; padding: 18px; margin-top: 18px; color: #111; }
+    .card { background: rgba(0,0,0,0.5); border-radius: 10px; padding: 18px; margin-top: 18px; color: #111; }
     footer { margin-top: 36px; color: #ccc; font-size: 14px; }
     .socials a { margin-right: 10px; text-decoration: none; color: #0b66ff; }
     @media (max-width:600px){
@@ -37,19 +40,17 @@
 
     <footer style="text-align:center;">
       <div class="socials" style="display:flex;gap:12px;justify-content:center;align-items:center;margin-bottom:12px;">
-        <!-- Using social icons (sourced from public platform assets) -->
-        <a href="https://www.youtube.com/R-Pax" target="_blank" rel="noopener">
-          <img src="https://pngdownload.io/wp-content/uploads/2021/06/youtube-logo-video-platform-social-media-transparent-png-image.png" alt="YouTube" width="32" height="32" />
+        <a href="https://www.youtube.com/@R-Pax" target="_blank" rel="noopener">
+          <img src="https://raw.githubusercontent.com/R-Pax/-pax.yt/main/youtube.png" alt="YouTube" width="32" height="32" />
         </a>
         <a href="https://www.twitch.tv/rpax7" target="_blank" rel="noopener">
-          <img src="https://pngdownload.io/wp-content/uploads/2021/06/twitch-logo-streaming-platform-icon-gaming-community-brand-transparent-png.png" alt="Twitch" width="32" height="32" />
+          <img src="https://raw.githubusercontent.com/R-Pax/-pax.yt/main/twitch.png" alt="Twitch" width="32" height="32" />
         </a>
         <a href="https://github.com/R-Pax" target="_blank" rel="noopener">
-          <img src="https://favpng.com/web/static/media/thumbs/2020/01/01/6/6/6/github-github-logo-repository-png-N7Jw8tCn_thumb.png" alt="GitHub" width="32" height="32" />
+          <img src="https://raw.githubusercontent.com/R-Pax/-pax.yt/main/github.png" alt="GitHub" width="32" height="32" />
         </a>
-        <!-- Profile clickable icon using the provided second image -->
         <a href="https://stw.news/R-Pax" target="_blank" rel="noopener">
-          <img src="https://www.citypng.com/public/uploads/preview/black-f-logo-letter-transparent-png-7863.png" alt="Profile" width="32" height="32" style="border-radius:4px;border:1px solid rgba(255,255,255,0.06)" />
+          <img src="https://raw.githubusercontent.com/R-Pax/-pax.yt/main/profile.png" alt="Profile" width="32" height="32" style="border-radius:4px;border:1px solid rgba(255,255,255,0.06)" />
         </a>
       </div>
       <div style="color:#ccc;font-size:15px;">contact: <a href="mailto:r@pax.yt" style="color:#fff;text-decoration:underline;">r@pax.yt</a></div>
