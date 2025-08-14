@@ -5,17 +5,34 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>pax.yt</title>
   <style>
+    /* ensure the page and body fill the viewport */
+    html, body { height: 100%; margin: 0; }
+
+    /* Content sits above the background pseudo-layer */
     body {
       font-family: Inter, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      /* background image + 50% black overlay */
+      color: #fff;
+      padding: 40px;
+      background: #0b0b0b; /* fallback color so no gaps show */
+      position: relative;
+      z-index: 0;
+    }
+
+    /* Full-viewport background drawn behind everything to avoid seams */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0; /* top:0; right:0; bottom:0; left:0; */
+      z-index: -1;
+      pointer-events: none;
       background:
         linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         url('https://raw.githubusercontent.com/R-Pax/-pax.yt/main/FORT_Load_BuildOff.png') center/cover no-repeat;
-      color: #fff;
-      margin: 0;
-      padding: 40px;
+      background-attachment: fixed; /* extra safety */
+      will-change: transform;
     }
-    .container { max-width: 900px; margin: 0 auto; }
+
+    .container { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
     header { display: flex; align-items: center; gap: 16px; }
     h1 { margin: 0; font-size: 34px; }
     nav ul { list-style: none; padding: 0; display: flex; gap: 14px; margin: 14px 0; }
@@ -23,20 +40,18 @@
     .card { background: rgba(0,0,0,0.5); border-radius: 10px; padding: 18px; margin-top: 18px; color: #111; }
     footer { margin-top: 36px; color: #ccc; font-size: 14px; }
     .socials a { margin-right: 10px; text-decoration: none; color: #0b66ff; }
+
     @media (max-width:600px){
-      body{padding:20px}
-      nav ul{flex-direction:column}
+      body { padding: 20px; }
+      nav ul { flex-direction: column; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header style="text-align:center; margin-bottom:24px;">
-      <!-- Replaced text with upscaled image -->
       <img id="mainLogo" src="https://raw.githubusercontent.com/R-Pax/-pax.yt/main/pax_blob.png" alt="logo" style="max-width:800px;width:70%;height:auto;display:block;margin:0 auto;" />
     </header>
-
-    <!-- Removed card as requested -->
 
     <footer style="text-align:center;">
       <div class="socials" style="display:flex;gap:12px;justify-content:center;align-items:center;margin-bottom:12px;">
